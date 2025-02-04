@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@600&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+html, body{
+    background: rgba(0, 11, 46, 1);
+    color: #fff;
+    height: 100%;
+    margin: 0;
+}
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+}
+hr {
+    margin: .5em 0;
+    border-bottom: 2px solid #fff;
+    border-top: unset;
+    opacity: unset;
+}
+img {width: 100%;}
+.main{flex: 1;}
+.wrapper {
+    display: flex;
+    flex-direction: column; /* 讓子元素垂直排列 */
+    min-height: 100vh; /* 最小高度為視窗高度 */
+}
+/*--- header ---*/
+header{
+    height: 48px;
+    background: rgba(35, 49, 96, 0.7);
+    align-items: center;
+}
+.header-left, .header-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+.header-right{
+    justify-content: flex-end;
+}
+.Btn-showsidebar img{
+    width: 30px;
+    height: 27px;
+}
+.logoBox img{
+    height: 48px;
+    width: auto;
+    padding: 0 3px;
+}
+.balanceBox img{
+    height: 24px;
+    width: auto;
+}
+.balanceBox .balance{
+    color: rgba(246, 207, 84, 1);
+    font-weight: 500;
+}
+.header-right .balanceBox {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+header .Btn-refreshbalance img{
+    height: 24px;
+    width: auto;
+}
+.dropdown-lang img{
+    width: 36px;
+    height: auto;
+    border: 4px solid #00133000;
+    border-radius: 50%;
+}
+.dropdown-lang:hover img{
+    border: 4px solid #00133099;
+}
+.dropdown-lang::after {
+    display: none !important;
+}
+.dropdown-lang-menu{
+    background: rgba(35, 49, 96, 0.9);
+    min-width: unset;
+    width: 36px;
+    left: unset!important;
+    right: 6px;
+    padding: 0;
+    border-radius: 20px;
+}
+.dropdown-lang-menu li:not(:first-child):not(:last-child) {
+    margin: 10px 0 !important;
+}
+.dropdown-item{
+    padding: 0;
+}
+.dropdown-item img{
+    width: 36px;
+    height: auto;
+    border: 4px solid #00133000;
+    border-radius: 50%;
+}
+/*--- Sidebar ---*/
+.SidebarBox {
+    display: flex;
+    flex-direction: column;
+}
+.recordBox{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    height: calc(100vh - 205px);
+}
+.settingBox{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    height: calc(100vh - 205px);
+}
+.UserBox, .tabbetrecordBox, .sidebarfooterBox {
+    flex-shrink: 0;   /* 固定這些區塊的高度 */
+}
+.currentbetsBox, .todaybetsBox, .settingswitchBox {
+    flex-grow: 1;   /* 填滿剩餘空間 */
+    overflow-y: auto;
+    position: relative;
+}
+.UserBox{
+    height: 80px;
+    background: rgba(35, 49, 96, 0.9);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin: 5px;
+}
+.UserBox .userimgBox img{
+    width: 48px;
+    height: 48px;
+}
+.UserBox .userimgBox {
+    margin-right: 10px;
+}
+.UserBox .balanceBox {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.UserBox .username {
+    font-size: 32px;
+    line-height: 32px;
+}
+.UserBox .balanceBox img{
+    width: 24px;
+    height: 24px;
+}
+.UserBox .balanceBox .Btn-refreshbalance {
+    line-height: 0;
+}
+.UserBox .balanceBox .Btn-refreshbalance img{
+    width: 18px;
+    height: 18px;
+}
+.UserBox .logoutBox {
+    margin-left: auto;
+}
+.UserBox .logoutBox img{
+    width: 36px;
+    height: 36px;
+}
+.tabbetrecordBox{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 5px;
+}
+.tabbetrecordBox .tab-primary {
+    flex: 1;
+    text-align: center;
+    height: 36px;
+    font-weight: 700;
+}
+.currentbetsBox, .todaybetsBox, .settingswitchBox {
+    border: 1px solid rgba(131, 131, 131, 1);
+    margin: 5px;
+    margin-top: 0;
+    border-radius: 16px;
+}
+.currentTitle, .todayTitle, .settingswitchTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    color: rgba(246, 207, 84, 1);
+    background: rgba(0, 11, 46, 1);
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-radius: 16px;
+}
+.currentarena img, .todaytotal img, .gamesetting img{
+    width: 24px;
+    height: 24px;
+}
+.currenttable, .todaytable {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+.currenttable th, .currenttable td,
+.todaytable th, .todaytable td {
+    border-bottom: 1px solid #fff1;
+    text-align: center;
+    padding: 3px;
+    word-wrap: break-word;
+}
+.currenttable .table-title,
+.todaytable .table-title {
+    background: rgba(43, 50, 72, 1);
+    position: sticky;
+    top: 35px;
+    z-index: 10;
+}
+.switch-name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-weight: 600;
+    color: #fff;
+    border-bottom: 1px solid #fff1;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(85, 85, 85, 1);
+    border-radius: 30px;
+    transition: .3s;
+}
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 3px;
+    background: rgba(131, 131, 131, 1);
+    border-radius: 50%;
+    transition: .3s;
+}
+.switch input:checked + .slider {
+    background: rgba(255, 217, 0, 1);
+}
+.switch input:checked + .slider::before {
+    transform: translateX(23px);
+    background: rgba(255, 127, 0, 1);
+}
+
+
+.sidebarfooterBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+.Btn-footeraction {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Btn-footeraction img{
+    width: 32px;
+    height: 32px;
+}
+.Btn-footeraction span{
+    font-size: 16px;
+    color: rgba(216, 216, 216, 1);
+}
+.Btn-footeraction.active span{
+    color: rgba(255, 128, 0, 1);
+}
+/*--- main主畫面 ---*/
+.main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.LIVEvideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.LIVEvideo img {
+    height: 100vh;
+    width: auto;
+    object-fit: cover;
+}
+/*--- BetareaBox ---*/
+.BetareaBox{
+    position: absolute;
+    height: 260px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(35, 49, 96, 0.9);
+    z-index: 2;
+    display: flex;
+}
+.BetGroup {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.btn-option{
+    height: 90px;
+    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.6) inset;
+}
+.BetGroup.btn-group .btn{
+    border-radius: 16px;
+}
+.BetGroup.btn-group>.btn:nth-child(n+2) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.BetGroup.btn-group>.btn {
+    flex: 1;
+}
+.btn-BetMeron, .btn-BetWala {
+    flex-grow: 1.2!important;
+}
+.btn-BetDraw {
+    flex-grow: 1!important;
+}
+.btn-BetMeron{
+    background: rgba(123, 171, 255, 1);
+    text-align: start;
+    padding-left: 10px!important;
+}
+.btn-BetMeron.active{
+    background: rgba(0, 100, 255, 1);
+}
+.btn-BetDraw{
+    background: rgba(123, 255, 123, 1);
+}
+.btn-BetDraw.active{
+    background: rgba(0, 200, 0, 1);
+}
+.btn-BetWala {
+    background: rgba(255, 123, 123, 1);
+    text-align: end;
+    padding-right: 10px!important;
+}
+.btn-BetWala.active{
+    background: rgba(255, 0, 0, 1);
+}
+.option-rate{
+    color: #fff;
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+}
+.option-name{
+    color: #fff9;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 900;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*--- Margin ---*/
+.m-00 {margin: 0;}
+.mt-05 {margin-top: 5px;}
+.mt-10 {margin-top: 10px;}
+.mt-15 {margin-top: 15px;}
+.mt-20 {margin-top: 20px;}
+.mt-30 {margin-top: 30px;}
+.mt-40 {margin-top: 40px;}
+.mt-50 {margin-top: 50px;}
+.mb-05 {margin-bottom: 5px;}
+.mb-10 {margin-bottom: 10px;}
+.mb-15 {margin-bottom: 15px;}
+.mb-20 {margin-bottom: 20px;}
+.mb-30 {margin-bottom: 30px;}
+.mb-40 {margin-bottom: 40px;}
+.mb-50 {margin-bottom: 50px;}
+.ml-05 {margin-left: 5px;}
+.ml-10 {margin-left: 10px;}
+.ml-15 {margin-left: 15px;}
+.ml-20 {margin-left: 20px;}
+.ml-30 {margin-left: 30px;}
+.ml-40 {margin-left: 40px;}
+.ml-50 {margin-left: 50px;}
+.mr-05 {margin-right: 5px;}
+.mr-10 {margin-right: 10px;}
+.mr-15 {margin-right: 15px;}
+.mr-20 {margin-right: 20px;}
+.mr-30 {margin-right: 30px;}
+.mr-40 {margin-right: 40px;}
+.mr-50 {margin-right: 50px;}
+.mx-05 {margin-left: 5px;margin-right: 5px;}
+.mx-10 {margin-left: 10px;margin-right: 10px;}
+.mx-15 {margin-left: 15px;margin-right: 15px;}
+.mx-20 {margin-left: 20px;margin-right: 20px;}
+.mx-30 {margin-left: 30px;margin-right: 30px;}
+.mx-40 {margin-left: 40px;margin-right: 40px;}
+.mx-50 {margin-left: 50px;margin-right: 50px;}
+.my-05 {margin-top: 5px;margin-bottom: 5px;}
+.my-10 {margin-top: 10px;margin-bottom: 10px;}
+.my-15 {margin-top: 15px;margin-bottom: 15px;}
+.my-20 {margin-top: 20px;margin-bottom: 20px;}
+.my-30 {margin-top: 30px;margin-bottom: 30px;}
+.my-40 {margin-top: 40px;margin-bottom: 40px;}
+.my-50 {margin-top: 50px;margin-bottom: 50px;}
+/*--- Padding ---*/
+.p-00{padding: 0;}
+.pt-05 {padding-top: 5px!important;}
+.pt-10 {padding-top: 10px!important;}
+.pt-15 {padding-top: 15px!important;}
+.pt-20 {padding-top: 20px!important;}
+.pt-30 {padding-top: 30px!important;}
+.pt-40 {padding-top: 40px!important;}
+.pt-50 {padding-top: 50px!important;}
+.pb-05 {padding-bottom: 5px!important;}
+.pb-10 {padding-bottom: 10px!important;}
+.pb-15 {padding-bottom: 15px!important;}
+.pb-20 {padding-bottom: 20px!important;}
+.pb-30 {padding-bottom: 30px!important;}
+.pb-40 {padding-bottom: 40px!important;}
+.pb-50 {padding-bottom: 50px!important;}
+.pl-05 {padding-left: 5px!important;}
+.pl-10 {padding-left: 10px!important;}
+.pl-15 {padding-left: 15px!important;}
+.pl-20 {padding-left: 20px!important;}
+.pl-30 {padding-left: 30px!important;}
+.pl-40 {padding-left: 40px!important;}
+.pl-50 {padding-left: 50px!important;}
+.pr-05 {padding-right: 5px!important;}
+.pr-10 {padding-right: 10px!important;}
+.pr-15 {padding-right: 15px!important;}
+.pr-20 {padding-right: 20px!important;}
+.pr-30 {padding-right: 30px!important;}
+.pr-40 {padding-right: 40px!important;}
+.pr-50 {padding-right: 50px!important;}
+.px-05 {padding-left: 5px!important;padding-right: 5px!important;}
+.px-10 {padding-left: 10px!important;padding-right: 10px!important;}
+.px-15 {padding-left: 15px!important;padding-right: 15px!important;}
+.px-20 {padding-left: 20px!important;padding-right: 20px!important;}
+.px-30 {padding-left: 30px!important;padding-right: 30px!important;}
+.px-40 {padding-left: 40px!important;padding-right: 40px!important;}
+.px-50 {padding-left: 50px!important;padding-right: 50px!important;}
+.py-05 {padding-top: 5px!important;padding-bottom: 5px!important;}
+.py-10 {padding-top: 10px!important;padding-bottom: 10px!important;}
+.py-15 {padding-top: 15px!important;padding-bottom: 15px!important;}
+.py-20 {padding-top: 20px!important;padding-bottom: 20px!important;}
+.py-30 {padding-top: 30px!important;padding-bottom: 30px!important;}
+.py-40 {padding-top: 40px!important;padding-bottom: 40px!important;}
+.py-50 {padding-top: 50px!important;padding-bottom: 50px!important;}
+
+/*--- Button ---*/
+button{
+    font-size: unset;
+}
+.btn{
+    border: none;
+}
+@media (max-width: 767px){
+    .btn{
+        padding: 0px 5px;
+    }
+}
+.btn-primary{
+    background: rgba(255, 128, 0, 1);
+}
+.btn-secondary{
+    background: linear-gradient(139.21deg, #A421E5 -18.54%, #6D04DD 122.12%);
+    color: #fff;
+}
+/*--- Tab Button ---*/
+.tab-primary{
+    background: rgba(0, 19, 48, 0.5);
+    border: 2px solid rgba(255, 193, 0, 1);
+    color: rgba(255, 193, 0, 1);
+    border-radius: 24px;
+    text-shadow: 0 0 5px #000;
+}
+.tab-primary:hover, .tab-primary:active{
+    background: rgba(255, 193, 0, 1);
+}
+.tab-primary.active{
+    background: rgba(255, 128, 0, 1);
+    color: #fff;
+    border-color: rgba(255, 128, 0, 1);
+}
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------*/
+/*--- PC/Mobile隱藏 ---*/
+@media screen and (min-width: 768px){
+    .PChide{display: none;}
+}
+@media screen and (max-width: 767px){
+    .MOBhide{display: none;}
+}
+
