@@ -59,7 +59,7 @@
             </header>
 
             <!-- Sidebar -->
-            <div class="SidebarBox" style="display: none;">
+            <div class="SidebarBox" style="display: none">
                 <!-- User detail -->
                 <div class="UserBox">
                     <div class="userimgBox">
@@ -211,8 +211,8 @@
 
                 <!-- Sidebar footer -->
                 <div class="sidebarfooterBox">
-                    <button class="btn Btn-footeraction active">
-                        <img src="./assets/img/icon/record-y.png">
+                    <button class="btn Btn-footeraction">
+                        <img src="./assets/img/icon/record-g.png">
                         <span>Record</span>
                     </button>
                     <button class="btn Btn-footeraction">
@@ -223,8 +223,8 @@
                         <img src="./assets/img/icon/terms-g.png">
                         <span>Terms</span>
                     </button>
-                    <button class="btn Btn-footeraction">
-                        <img src="./assets/img/icon/setting-g.png">
+                    <button class="btn Btn-footeraction active">
+                        <img src="./assets/img/icon/setting-y.png">
                         <span>Setting</span>
                     </button>
                     <button class="btn Btn-footeraction">
@@ -236,21 +236,150 @@
 
             <!-- Main -->
             <div class="main">
-                <div class="LIVEvideo"><img src="./assets/img/normal.jpg"></div>
-                <div class="BetareaBox">
+                <!-- 直播視訊 -->
+                <div class="LIVEvideo">
+                    <video src="./assets/img/normal-sample.mp4" autoplay muted></video>
+                </div>
+
+                <!-- LIVE chat -->
+                <div class="livechatBox px-10 py-05">
+                    <input type="text" placeholder="Say something...">
+                    <button class="btn btn-liveinteract" type="button"><img src="./assets/img/icon/redenvelope.png"></button>
+                    <button class="btn btn-liveinteract" type="button"><img src="./assets/img/icon/present.png"></button>
+                    <button class="btn btn-livedown" type="button"><img src="./assets/img/icon/arrowdown.png"></button>
+                </div>
+
+                <!-- bet area -->
+                <div class="betareaBox">
+                    <!-- bet options -->
                     <div class="BetGroup btn-group mx-10 my-10" role="group">
                         <button type="button" class="btn btn-option btn-BetMeron">
                             <span class="option-rate">00.00</span><br>
                             <span class="option-name">MERON</span>
+                            <img src="./assets/img/icon/win.png" class="winMeron">
                         </button>
                         <button type="button" class="btn btn-option btn-BetDraw active">
                             <span class="option-rate">00.00</span><br>
                             <span class="option-name">DRAW</span>
+                            <img src="./assets/img/icon/win.png" class="winDraw">
                         </button>
                         <button type="button" class="btn btn-option btn-BetWala">
                             <span class="option-rate">00.00</span><br>
                             <span class="option-name">WALA</span>
+                            <img src="./assets/img/icon/win.png" class="winWala">
                         </button>
+                    </div>
+
+                    <!-- waymap total -->
+                    <div class="waymaptotalBox">
+                        <button class="btn btn-primary" type="button">Re Bets</button>
+                        <div class="pointtotal"><span class="Mpoint"></span>M <span>14</span></div>
+                        <div class="pointtotal"><span class="Wpoint"></span>W <span>15</span></div>
+                        <div class="pointtotal"><span class="Dpoint"></span>D <span>4</span></div>
+                        <button class="btn btn-waymapmore" type="button"><img src="./assets/img/icon/arrowdown.png"></button>
+                    </div>
+                    <!-- waymap -->
+                    <div class="waymapBox mx-10 my-10">
+                        <table class="waymaptable">
+                            <tbody>
+                                <tr>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Dpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Dpoint"></span></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Dpoint"></span></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
