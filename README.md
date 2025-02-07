@@ -1,2 +1,3 @@
-# cockfighting67999
+# cockfighting
 /live.html --> The streamer screen
+/cockfighting.html -->Game cockfighting 
