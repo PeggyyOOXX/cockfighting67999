@@ -616,6 +616,7 @@ header .Btn-refreshbalance img{
     align-items: center;
     border-radius: 16px;
     background: rgba(0, 11, 46, 1);
+    flex-direction: column;
 }
 .chipBox {
     display: flex;
@@ -660,10 +661,70 @@ header .Btn-refreshbalance img{
     animation: bounceFade 1s ease-out forwards;
 }
 @keyframes bounceFade {
-    0% { transform: translateX(60%) translateY(0); opacity: 1; }
-    20% { transform: translateX(60%) translateY(-10px); opacity: 1; }
-    60% { transform: translateX(60%) translateY(-20px); opacity: 1; }
+    0% { transform: translateX(60%) translateY(-10); opacity: 1; }
+    50% { transform: translateX(60%) translateY(-20px); opacity: 1; }
     100% { transform: translateX(60%) translateY(-30px); opacity: 0; }
+}
+
+
+
+.chiprangeBox {
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.chiprangeslider {
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    outline: none;
+    position: relative;
+    background: rgba(216, 216, 216, 1);
+}
+.chiprangeslider::-webkit-slider-runnable-track {
+    background: transparent;    /* 隱藏原生slider */
+}
+.chiprangeslider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 217, 0, 1);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px #000;
+    position: relative;
+    margin-top: -9px;
+}
+.chiprangecircle {
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    left: 0;
+    margin-top: 4px;
+    pointer-events: none;
+    padding: 0 10px;
+}
+.chiprangecircle span {
+    width: 25px;
+    height: 25px;
+    background: rgba(216, 216, 216, 1);
+    border-radius: 50%;
+}
+.chiprangelabels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.chiprangelabels span {
+    color: #fff;
 }
 
 
