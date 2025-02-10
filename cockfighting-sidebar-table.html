@@ -1,0 +1,419 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+        <meta name="format-detection" content="telephone=no">
+        <title>cockfighting-sidebar-table</title>
+
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/main.css">
+
+        <script type="text/javascript" src="./assets/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="./assets/js/customize.js"></script>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- header -->
+            <header>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4 header-left">
+                            <div class="showSidebarBox">
+                                <button class="btn Btn-showsidebar">
+                                    <img src="./assets/img/icon/showsidebar.png">
+                                </button>
+                            </div>
+                            <div class="logoBox">
+                                <img src="./assets/img/logo.png">
+                            </div>
+                        </div>
+                        <div class="col-8 header-right">
+                            <div class="balanceBox">
+                                <img src="./assets/img/icon/dollar.png">
+                                <span class="balance">999,999.99</span>
+                            </div>
+                            <div class="refreshbalanceBox">
+                                <button class="btn Btn-refreshbalance">
+                                    <img src="./assets/img/icon/refresh.png">
+                                </button>
+                            </div>
+                            <div class="dropdown dropdown-langBox">
+                                <button class="btn dropdown-toggle dropdown-lang" type="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                                    <img src="./assets/img/lang/en.png">
+                                </button>
+                                <ul class="dropdown-menu dropdown-lang-menu">
+                                    <li><button class="dropdown-item" type="button"><img src="./assets/img/lang/en.png"></button></li>
+                                    <li><button class="dropdown-item" type="button"><img src="./assets/img/lang/zh.png"></button></li>
+                                    <li><button class="dropdown-item" type="button"><img src="./assets/img/lang/vn.png"></button></li>
+                                    <li><button class="dropdown-item" type="button"><img src="./assets/img/lang/jp.png"></button></li>
+                                    <li><button class="dropdown-item" type="button"><img src="./assets/img/lang/th.png"></button></li>
+                                    <li><button class="dropdown-item" type="button"><img src="./assets/img/lang/in.png"></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </header>
+
+            <!-- Sidebar -->
+            <div class="SidebarBox">
+                <!-- User detail -->
+                <div class="UserBox">
+                    <div class="userimgBox">
+                        <img src="./assets/img/icon/userimg.png">
+                    </div>
+                    <div class="">
+                        <span class="username">Username</span>
+                        <div class="balanceBox">
+                            <img src="./assets/img/icon/dollar.png">
+                            <span class="balance">888,888.88</span>
+                            <button class="btn Btn-refreshbalance">
+                                <img src="./assets/img/icon/refresh.png">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="logoutBox">
+                        <button class="btn Btn-logout">
+                            <img src="./assets/img/icon/logout.png">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- record -->
+                <div class="recordBox">
+                    <!-- Tab--Bet record -->
+                    <div class="tabbetrecordBox">
+                        <button class="btn tab-primary">Current Bets</button>
+                        <button class="btn tab-primary active">Today Bets</button>
+                    </div>
+
+                    <!-- Current Bets -->
+                    <div class="currentbetsBox" style="display: none">
+                        <div class="currentTitle">
+                            <div class="currentarena">
+                                <img src="./assets/img/icon/arena-o.png">
+                                <span>Arena</span>
+                            </div>
+                            <div class="">
+                                <span>Total Bets</span>
+                            </div>
+                        </div>
+                        <table class="currenttable">
+                            <tbody>
+                                <tr class="table-title">
+                                    <th>No</th>
+                                    <th>Bet(Odd)</th>
+                                    <th>Amount</th>
+                                </tr>
+                                <tr>
+                                    <td>CF01</td>
+                                    <td>50</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>CF02</td>
+                                    <td>100</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td>CF03</td>
+                                    <td>200</td>
+                                    <td>200</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Today Bets -->
+                    <div class="todaybetsBox">
+                        <div class="todayTitle">
+                            <div class="todaytotal">
+                                <img src="./assets/img/icon/refresh-o.png">
+                                <span>Today Total</span>
+                            </div>
+                            <div class="">
+                                <span>0</span>
+                            </div>
+                        </div>
+                        <table class="todaytable">
+                            <tbody>
+                                <tr class="table-title">
+                                    <th>No</th>
+                                    <th>Bet(Odd)</th>
+                                    <th>Win/Lose</th>
+                                    <th>Amount</th>
+                                </tr>
+                                <tr>
+                                    <td>CF01</td>
+                                    <td>50</td>
+                                    <td style="color: dodgerblue;">WIN</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>CF02</td>
+                                    <td>100</td>
+                                    <td style="color: dodgerblue;">WIN</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td>CF03</td>
+                                    <td>200</td>
+                                    <td style="color: red;">LOSE</td>
+                                    <td>200</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- setting -->
+                <div class="settingBox" style="display: none">
+                    <div class="settingswitchBox">
+                        <div class="settingswitchTitle">
+                            <div class="gamesetting">
+                                <img src="./assets/img/icon/setting-o.png">
+                                <span>Game Setting</span>
+                            </div>
+                        </div>
+                        <div class="switch-name">
+                            <span>Anchor Voice</span>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="switch-name">
+                            <span>Effects Voice</span>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="switch-name">
+                            <span>All Voice</span>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="switch-name">
+                            <span>Win Effects</span>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar footer -->
+                <div class="sidebarfooterBox">
+                    <button class="btn Btn-footeraction">
+                        <img src="./assets/img/icon/record-g.png">
+                        <span>Record</span>
+                    </button>
+                    <button class="btn Btn-footeraction">
+                        <img src="./assets/img/icon/guide-g.png">
+                        <span>Guide</span>
+                    </button>
+                    <button class="btn Btn-footeraction">
+                        <img src="./assets/img/icon/terms-g.png">
+                        <span>Terms</span>
+                    </button>
+                    <button class="btn Btn-footeraction active">
+                        <img src="./assets/img/icon/setting-y.png">
+                        <span>Setting</span>
+                    </button>
+                    <button class="btn Btn-footeraction">
+                        <img src="./assets/img/icon/lobby-g.png">
+                        <span>Lobby</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Main -->
+            <div class="main" style="display: none">
+                <div class="portrait-content">
+                    <!-- 美女直播視訊 -->
+                    <div class="videoBox">
+                        <div class="LIVEvideo">
+                            <video src="./assets/img/normal-sample.mp4" autoplay muted></video>
+                        </div>
+                        <div class="videoswitch">
+                            <video src="./assets/img/cock-sample.mp4" autoplay muted></video>
+                        </div>
+                    </div>
+
+                    <!-- LIVE chat -->
+                    <div class="livechatBox">
+                        <input type="text" placeholder="Say something...">
+                        <button class="btn btn-liveinteract" type="button"><img src="./assets/img/icon/redenvelope.png"></button>
+                        <button class="btn btn-liveinteract" type="button"><img src="./assets/img/icon/present.png"></button>
+                        <button class="btn btn-livedown" type="button"><img src="./assets/img/icon/arrowdown.png"></button>
+                    </div>
+                </div>
+
+                <div class="landscape-content">
+                    <!-- 鬥雞直播視訊 -->
+                    <div class="videoBox">
+                        <div class="LIVEvideo">
+                            <video src="./assets/img/cock-sample.mp4" autoplay muted></video>
+                        </div>
+                        <div class="videoswitch">
+                            <video src="./assets/img/normal-sample.mp4" autoplay muted></video>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- bet area -->
+                <div class="betareaBox">
+                    <!-- bet options -->
+                    <div class="BetGroup btn-group" role="group">
+                        <button type="button" class="btn btn-option btn-BetMeron active">
+                            <span class="option-rate">00.00</span><br>
+                            <span class="option-name">MERON</span>
+                            <img src="./assets/img/icon/win.png" class="winMeron">
+                        </button>
+                        <button type="button" class="btn btn-option btn-BetDraw">
+                            <span class="option-rate">00.00</span><br>
+                            <span class="option-name">DRAW</span>
+                            <img src="./assets/img/icon/win.png" class="winDraw">
+                        </button>
+                        <button type="button" class="btn btn-option btn-BetWala">
+                            <span class="option-rate">00.00</span><br>
+                            <span class="option-name">WALA</span>
+                            <img src="./assets/img/icon/win.png" class="winWala">
+                        </button>
+                    </div>
+
+                    <!-- waymap total -->
+                    <div class="waymaptotalBox">
+                        <button class="btn btn-primary" type="button">Re Bets</button>
+                        <div class="pointtotal"><span class="Mpoint"></span>M <span>14</span></div>
+                        <div class="pointtotal"><span class="Wpoint"></span>W <span>15</span></div>
+                        <div class="pointtotal"><span class="Dpoint"></span>D <span>4</span></div>
+                        <button class="btn btn-waymapmore" type="button"><img src="./assets/img/icon/arrowdown.png"></button>
+                    </div>
+                    <!-- waymap -->
+                    <div class="waymapBox">
+                        <table class="waymaptable">
+                            <tbody>
+                                <tr>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Dpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Dpoint"></span></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Dpoint"></span></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="Wpoint"></span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="Mpoint"></span></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- win popup-->
+            <div class="black-overlay" style="display: none">
+                <div class="winpopupBox">
+                    <div class="winpopupmain">
+                        <img src="./assets/img/icon/winpopup.png" class="winpopup">
+                        <div class="winbonus">6666666666</div>
+                    </div>
+                    <img src="./assets/img/icon/light.png" class="winlight">
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
