@@ -992,7 +992,7 @@ button{
 }
 .btn-secondary:hover, .btn-secondary:active{
     background: rgba(255, 193, 0, 1)!important;
-    border: none;
+    border: 2px solid rgba(255, 193, 0, 1);
 }
 /*--- Tab Button ---*/
 .tab-primary{
