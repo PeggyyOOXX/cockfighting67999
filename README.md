@@ -5,3 +5,4 @@
 /cockfighting-sidebar-record.html --> Sidebar record <br>
 /cockfighting-sidebar-setting.html --> Sidebar setting <br>
 /cockfighting-betchip.html --> Bet chip <br>
+/cockfighting-live.html --> Host live <br>
