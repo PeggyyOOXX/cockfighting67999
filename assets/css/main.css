@@ -325,19 +325,87 @@ header .Btn-refreshbalance img{
     max-width: 150px;
     display: block;
 }
+.selectarena {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 2;
+    background: rgba(0, 19, 48, 0.5);
+    border-radius: 16px;
+}
+.selectarena .CFarena{
+    padding: 4px 10px;
+    display: flex;
+    align-items: center;
+}
+.selectarena img{
+    width: 14px;
+    height: 14px;
+    margin-left: 10px;
+}
+.selectnetline {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 2;
+    background: rgba(0, 19, 48, 0.5);
+    border-radius: 16px;
+}
+.selectnetline .netline{
+    padding: 4px 10px;
+    display: flex;
+    align-items: center;
+}
+.selectnetline img{
+    width: 14px;
+    height: 14px;
+    margin-left: 10px;
+}
 .livechatBox{
     position: absolute;
     bottom: 260px;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.2);
     z-index: 2;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 10px;
 }
-.livechatBox input {
+.chatrecord{
+    width: 100%;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 0 10px;
+    max-height: 150px;
+}
+.chatrecord::-webkit-scrollbar {
+    width: 6px;
+}
+.chatrecord::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 128, 0, 1);
+    border-radius: 5px;
+}
+.chatrecord::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+.chatunit{
+    padding: 2px 0;
+}
+.chatunit img{
+    width: 25px;
+    height: 25px;
+}
+.chataction{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.3);
+}
+.userchat {
     padding: 5px 10px;
     border: none;
     border-radius: 20px;
@@ -353,6 +421,9 @@ header .Btn-refreshbalance img{
     align-items: center;
     justify-content: center;
 }
+.btn-liveinteract:hover, .btn-liveinteract:active{
+    background: rgba(0, 0, 0, .5);
+}
 .btn-livedown{
     background: rgba(0, 0, 0, 0.3);
     width: 40px;
@@ -361,6 +432,9 @@ header .Btn-refreshbalance img{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.btn-livedown:hover, .btn-livedown:active{
+    background: rgba(255, 193, 0, .5);
 }
 .btn-livedown img{
     width: 20px;
@@ -777,12 +851,67 @@ header .Btn-refreshbalance img{
     width: 100%;
 }
 .betbuttonBox .btn {
-    flex: 1; /* 平均分配寬度 */
+    flex: 1;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
     margin: 5px;
     height: 36px;
+}
+/*--- LIVE直播選桌邊欄 ---*/
+.openselectroomBox {
+    position: fixed;
+    top: 30%;
+    left: 0;
+    background: rgba(0, 19, 48, 0.5);
+    padding: 16px 8px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    cursor: pointer;
+    z-index: 4;
+    transition: left 0.3s ease;
+}
+.openselectroomBox img {
+    width: 10px;
+    height: auto;
+}
+.selectroomBox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100vh;
+    background: rgba(0, 19, 48, 0.5);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin-top: 48px;
+    transform: translateX(-100%); /* 用 transform 讓它滑出畫面 */
+    transition: transform 0.3s ease;
+}
+.selectroomBox.open {
+    transform: translateX(0);
+}
+.tabselectroomBox{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    background: rgba(35, 49, 96, 1);
+    padding: 5px;
+}
+.tabselectroomBox .tab-primary {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+}
+.liveroomBox{
+    margin: 5px 0;
+    border-radius: 8px;
+    border: 2px solid rgba(131, 184, 255, 1);
+}
+.liveroomBox img{
+    border-radius: 8px;
 }
 
 
