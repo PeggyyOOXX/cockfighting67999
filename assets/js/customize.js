@@ -16,4 +16,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     rangeInput.addEventListener("input", updateRangeUI);    // 監聽滑桿變化
 
+
+    // 直播選桌邊欄
+    const selectroomBox = document.querySelector(".selectroomBox");
+    const toggleBtn = document.querySelector(".openselectroomBox");
+    const toggleIcon = toggleBtn.querySelector(".openarrow");
+
+    toggleBtn.addEventListener("click", function () {
+        selectroomBox.classList.toggle("open");
+
+        if (selectroomBox.classList.contains("open")) {
+            toggleBtn.style.left = "45%";
+            toggleIcon.style.transform = "rotate(180deg)";
+        } else {
+            toggleBtn.style.left = "0";
+            toggleIcon.style.transform = "rotate(0deg)";
+        }
+    });
 });
