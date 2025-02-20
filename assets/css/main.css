@@ -947,6 +947,112 @@ header .Btn-refreshbalance img{
     width: 8px;
     height: 8px;
 }
+/*--- Redenvelope modal ---*/
+.redenvelopeBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: rgba(0, 11, 46, 1);
+    flex-direction: column;
+    width: 90vw;
+    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.6) inset;
+}
+.redenvelopeamountBox{
+    width: 100%;
+    padding: 10px;
+}
+.redenvelopeamount {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 0;
+}
+.redenvelopeamount img {
+    position: absolute;
+    left: 20px;
+    width: 20px;
+    height: auto;
+}
+.redenvelopeamount input {
+    width: 100%;
+    background: rgba(35, 49, 96, 0.9);
+    color: #fff;
+    height: 35px;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    outline: none;
+    text-align: center;
+}
+.redenvelopeamountBox span {
+    display: block;
+    font-size: 16px;
+    color: rgba(255, 134, 134, 1);
+    text-align: center;
+    padding-right: 10px;
+}
+.sentgiftbtnBox{
+    padding: 10px 5px;
+    display: flex;
+    width: 100%;
+}
+.sentgiftbtnBox .btn {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    height: 36px;
+}
+/*--- Present modal ---*/
+.presentBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: rgba(0, 11, 46, 1);
+    flex-direction: column;
+    width: 90vw;
+    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.6) inset;
+}
+.presenttypeBox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.present-option {
+    margin: 10px;
+}
+.presentimg {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.presentlight, .presentobject {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.presentobject {
+    z-index: 1;
+}
+.presenttext{
+    text-align: center;
+}
+.presentname{
+    color: rgba(255, 255, 255, 1);
+}
+.presentprice{
+    color: rgba(255, 217, 0, 1);
+}
+
 
 
 
