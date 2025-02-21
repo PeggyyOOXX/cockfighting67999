@@ -34,3 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+window.addEventListener("load", function() {
+    setTimeout(function() {
+        window.scrollTo(0, 1); // 當頁面加載後，滾動到 (0,1) 就能隱藏地址欄
+    }, 0);
+});
