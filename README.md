@@ -8,3 +8,4 @@
 /cockfighting-live.html --> Host live <br>
 /cockfighting-live-redenvelope.html --> Host live - Red envelope <br>
 /cockfighting-live-present.html --> Host live - Present<br>
+/cockfighting-login.html --> Login / Sign in<br>
